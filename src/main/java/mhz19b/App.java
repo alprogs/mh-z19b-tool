@@ -7,6 +7,8 @@ import mhz19b.util.Log;
 
 public class App {
 
+	private static final boolean EXTERNAL_TOOL_MODE = true;
+
 	public void doProcess() {
 		try (MHZ19BDriver mhz19b = MHZ19BDriver.getInstance("/dev/serial0")) {
 		//try (MHZ19BDriver mhz19b = MHZ19BDriver.getInstance("/dev/ttyAMA0")) {
@@ -16,7 +18,12 @@ public class App {
 
 			while (true) {
 				int value = mhz19b.getGasConcentration();
-				Log.info("co2:" + value);
+
+				if (EXTERNAL_TOOL_MODE == false) {
+					Log.info("co2:" + value);
+				} else {
+					System.out.println("co2:" + value);
+				}
 
 				Thread.sleep(10000);
 			}

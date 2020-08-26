@@ -42,7 +42,7 @@ public class MHZ19BDriver implements AutoCloseable {
 
 	private static final ConcurrentHashMap<String, MHZ19BDriver> map 	= new ConcurrentHashMap<String, MHZ19BDriver>();
 
-	private static final boolean isTraceEnabled 	= true;
+	private static final boolean isTraceEnabled 	= false;
 
 	synchronized public static MHZ19BDriver getInstance(String portName) {
 		return getInstance(portName, DEFAULT_TIMEOUT);
@@ -176,9 +176,10 @@ public class MHZ19BDriver implements AutoCloseable {
 
 	private int convertInt(byte[] data) {
 
-		int high 	= Integer.parseInt( String.valueOf(data[0]), 16 );
-		int low 	= Integer.parseInt( String.valueOf(data[1]), 16 );
+		int high 	= Integer.parseInt(Byte.toString( data[0] ), 16);
+		int low 	= Integer.parseInt(Byte.toString( data[1] ), 16);
 		int value 	= (high * 256) + low;
+
 		//for (int i = 0; i < data.length; i++) {
 		//	value = (value << 8) + (data[i] & 0xff);
 		//}
