@@ -2,13 +2,20 @@ package mhz19b;
 
 import java.io.IOException;
 
-import mhz19b.const.Const;
 import mhz19b.driver.MHZ19BDriver;
 import mhz19b.util.Log;
 
 public class App {
 
-	public void doProcess() {
+	private boolean isExternalToolMode = false;
+
+	public void doProcess(String[] args) {
+		if (args.length > 0) {
+			isExternalToolMode = args[0].equals( Const.OPT_EXTERNAL_TOOL );
+
+			Log.setPrintForceOnly( isExternalToolMode );
+		}
+
 		try (MHZ19BDriver mhz19b = MHZ19BDriver.getInstance("/dev/serial0")) {
 		//try (MHZ19BDriver mhz19b = MHZ19BDriver.getInstance("/dev/ttyAMA0")) {
 			mhz19b.open();
@@ -18,7 +25,7 @@ public class App {
 			while (true) {
 				int value = mhz19b.getGasConcentration();
 
-				if (Const.EXTERNAL_TOOL_MODE == false) {
+				if (isExternalToolMode == false) {
 					Log.info("co2:" + value);
 				} else {
 					System.out.println("co2:" + value);
@@ -35,7 +42,7 @@ public class App {
 
     public static void main(String[] args) {
 		App app 	= new App();
-		app.doProcess();
+		app.doProcess( args );
     }
 }
 

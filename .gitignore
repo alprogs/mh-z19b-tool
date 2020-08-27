@@ -9,3 +9,6 @@ build
 
 # Ignore java build output directory
 bin
+
+# Ignore ctags file
+tags

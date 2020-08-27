@@ -54,6 +54,7 @@ CMD_GAS_CONCENTRATION_RET_LENGTH	src/main/java/mhz19b/driver/MHZ19BDriver.java	/
 Class mhz19b.AppTest	build/reports/tests/test/classes/mhz19b.AppTest.html	/^<h1>Class mhz19b.AppTest<\/h1>$/;"	h
 Classes	build/reports/tests/test/index.html	/^<h2>Classes<\/h2>$/;"	i
 Classes	build/reports/tests/test/packages/mhz19b.html	/^<h2>Classes<\/h2>$/;"	i
+Const	src/main/java/mhz19b/Const.java	/^public class Const {$/;"	c
 DATABITS	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private static final int DATABITS 	= 8;$/;"	f	class:MHZ19BDriver	file:
 DEFAULT_JVM_OPTS	build/scripts/mh-z19b-tool.bat	/^set DEFAULT_JVM_OPTS=$/;"	v
 DEFAULT_JVM_OPTS	gradlew.bat	/^set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"$/;"	v
@@ -72,6 +73,7 @@ Log	src/main/java/mhz19b/util/Log.java	/^public class Log {$/;"	c
 MHZ19BDriver	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private MHZ19BDriver(String portName) {$/;"	m	class:MHZ19BDriver	file:
 MHZ19BDriver	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private MHZ19BDriver(String portName, int timeout) {$/;"	m	class:MHZ19BDriver	file:
 MHZ19BDriver	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^public class MHZ19BDriver implements AutoCloseable {$/;"	c
+OPT_EXTERNAL_TOOL	src/main/java/mhz19b/Const.java	/^	public static final String OPT_EXTERNAL_TOOL 	= "ext.tool";$/;"	f	class:Const
 PARITY	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private static final int PARITY 	= SerialPort.NO_PARITY;$/;"	f	class:MHZ19BDriver	file:
 Package mhz19b	build/reports/tests/test/packages/mhz19b.html	/^<h1>Package mhz19b<\/h1>$/;"	h
 Packages	build/reports/tests/test/index.html	/^<h2>Packages<\/h2>$/;"	i
@@ -106,7 +108,7 @@ div.tab th	build/reports/tests/test/css/base-style.css	/^div.tab th {$/;"	s
 div.tab th	build/reports/tests/test/css/base-style.css	/^div.tab th, div.tab table {$/;"	s
 div.tab th.numeric	build/reports/tests/test/css/base-style.css	/^div.tab td.numeric, div.tab th.numeric {$/;"	c
 div.tab th:first-child	build/reports/tests/test/css/base-style.css	/^div.tab th:first-child {$/;"	s
-doProcess	src/main/java/mhz19b/App.java	/^	public void doProcess() {$/;"	m	class:App
+doProcess	src/main/java/mhz19b/App.java	/^	public void doProcess(String[] args) {$/;"	m	class:App
 dump	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private void dump(byte[] data, String tag) {$/;"	m	class:MHZ19BDriver	file:
 end	build/scripts/mh-z19b-tool.bat	/^:end$/;"	l
 end	gradlew.bat	/^:end$/;"	l
@@ -122,6 +124,7 @@ findJavaFromJavaHome	gradlew.bat	/^:findJavaFromJavaHome$/;"	l
 findTabs	build/reports/tests/test/js/report.js	/^    function findTabs(container) {$/;"	f
 findTitles	build/reports/tests/test/js/report.js	/^    function findTitles(tabs) {$/;"	f
 forAllCodeBlocks	build/reports/tests/test/js/report.js	/^    function forAllCodeBlocks(operation) {$/;"	f
+force	src/main/java/mhz19b/util/Log.java	/^	public static void force(String message) {$/;"	m	class:Log
 getCheckBox	build/reports/tests/test/js/report.js	/^    function getCheckBox() {$/;"	f
 getCheckSum	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private byte getCheckSum(byte[] data) {$/;"	m	class:MHZ19BDriver	file:
 getClassAttribute	build/reports/tests/test/js/report.js	/^    function getClassAttribute(element) {$/;"	f
@@ -140,8 +143,9 @@ h3	build/reports/tests/test/css/base-style.css	/^h1, h2, h3 {$/;"	s
 info	src/main/java/mhz19b/util/Log.java	/^	public static void info(String message) {$/;"	m	class:Log
 initControls	build/reports/tests/test/js/report.js	/^    function initControls() {$/;"	f
 initTabs	build/reports/tests/test/js/report.js	/^    function initTabs() {$/;"	f
+isExternalToolMode	src/main/java/mhz19b/App.java	/^	private boolean isExternalToolMode = false;$/;"	f	class:App	file:
 isOpened	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public boolean isOpened() {$/;"	m	class:MHZ19BDriver
-isTraceEnabled	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private static final boolean isTraceEnabled 	= true;$/;"	f	class:MHZ19BDriver	file:
+isTraceEnabled	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private static final boolean isTraceEnabled 	= false;$/;"	f	class:MHZ19BDriver	file:
 label.hidden	build/reports/tests/test/css/base-style.css	/^label.hidden {$/;"	c
 logPrefix	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private final String logPrefix;$/;"	f	class:MHZ19BDriver	file:
 main	src/main/java/mhz19b/App.java	/^    public static void main(String[] args) {$/;"	m	class:App
@@ -150,6 +154,7 @@ mainEnd	build/scripts/mh-z19b-tool.bat	/^:mainEnd$/;"	l
 mainEnd	gradlew.bat	/^:mainEnd$/;"	l
 map	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private static final ConcurrentHashMap<String, MHZ19BDriver> map 	= new ConcurrentHashMap<Strin/;"	f	class:MHZ19BDriver	file:
 mhz19b	src/main/java/mhz19b/App.java	/^package mhz19b;$/;"	p
+mhz19b	src/main/java/mhz19b/Const.java	/^package mhz19b;$/;"	p
 mhz19b	src/test/java/mhz19b/AppTest.java	/^package mhz19b;$/;"	p
 mhz19b.driver	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^package mhz19b.driver;$/;"	p
 mhz19b.util	src/main/java/mhz19b/util/Log.java	/^package mhz19b.util;$/;"	p
@@ -158,6 +163,7 @@ omega	gradlew.bat	/^:omega$/;"	l
 onload	build/reports/tests/test/js/report.js	/^    window.onload = function() {$/;"	f	function:window
 open	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	synchronized public void open() throws IOException {$/;"	m	class:MHZ19BDriver
 prefixPortName	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private final String prefixPortName;$/;"	f	class:MHZ19BDriver	file:
+printForceOnly	src/main/java/mhz19b/util/Log.java	/^	private static boolean printForceOnly 	= false;$/;"	f	class:Log	file:
 printSTEInfo	src/main/java/mhz19b/util/Log.java	/^	private static void printSTEInfo(StackTraceElement ste, String message) {$/;"	m	class:Log	file:
 read	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private byte[] read(int size) throws IOException {$/;"	m	class:MHZ19BDriver	file:
 removeClass	build/reports/tests/test/js/report.js	/^    function removeClass(element, classValue) {$/;"	f
@@ -171,6 +177,7 @@ setCalibrateZeroPoint	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public vo
 setDetectionRange	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private void setDetectionRange(int range) throws IOException {$/;"	m	class:MHZ19BDriver	file:
 setDetectionRange2000	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public void setDetectionRange2000() throws IOException {$/;"	m	class:MHZ19BDriver
 setDetectionRange5000	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public void setDetectionRange5000() throws IOException {$/;"	m	class:MHZ19BDriver
+setPrintForceOnly	src/main/java/mhz19b/util/Log.java	/^	private static void setPrintForceOnly(boolean value) {$/;"	m	class:Log	file:
 setTimeout	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private void setTimeout(int timeout) {$/;"	m	class:MHZ19BDriver	file:
 span.code	build/reports/tests/test/css/base-style.css	/^span.code {$/;"	c
 span.code pre	build/reports/tests/test/css/base-style.css	/^span.code pre {$/;"	s

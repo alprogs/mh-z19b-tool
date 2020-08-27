@@ -1,12 +1,23 @@
 package mhz19b.util;
 
 public class Log {
-	public static void info(String message) {
+
+	private static boolean printForceOnly 	= false;
+
+	public static void force(String message) {
 		printSTEInfo( Thread.currentThread().getStackTrace()[2], message );
 	}
 
+	public static void info(String message) {
+		if (!printForceOnly) {
+			printSTEInfo( Thread.currentThread().getStackTrace()[2], message );
+		}
+	}
+
 	public static void warn(String message) {
-		printSTEInfo( Thread.currentThread().getStackTrace()[2], "[WARN] "+ message );
+		if (!printForceOnly) {
+			printSTEInfo( Thread.currentThread().getStackTrace()[2], "[WARN] "+ message );
+		}
 	}
 	
 	public static void warn(Exception e) {
@@ -23,4 +34,9 @@ public class Log {
 
 		System.out.println( sb.toString() );
 	}
+
+	public static void setPrintForceOnly(boolean value) {
+		printForceOnly 	= value;
+	}
+
 }
