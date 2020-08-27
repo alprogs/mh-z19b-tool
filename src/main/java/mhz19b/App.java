@@ -2,12 +2,11 @@ package mhz19b;
 
 import java.io.IOException;
 
+import mhz19b.const.Const;
 import mhz19b.driver.MHZ19BDriver;
 import mhz19b.util.Log;
 
 public class App {
-
-	private static final boolean EXTERNAL_TOOL_MODE = true;
 
 	public void doProcess() {
 		try (MHZ19BDriver mhz19b = MHZ19BDriver.getInstance("/dev/serial0")) {
@@ -19,7 +18,7 @@ public class App {
 			while (true) {
 				int value = mhz19b.getGasConcentration();
 
-				if (EXTERNAL_TOOL_MODE == false) {
+				if (Const.EXTERNAL_TOOL_MODE == false) {
 					Log.info("co2:" + value);
 				} else {
 					System.out.println("co2:" + value);

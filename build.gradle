@@ -35,3 +35,16 @@ application {
     // Define the main class for the application.
     mainClassName = 'mhz19b.App'
 }
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'mhz19b.App'
+    }
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+
+
