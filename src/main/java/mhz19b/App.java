@@ -26,9 +26,9 @@ public class App {
 				int value = mhz19b.getGasConcentration();
 
 				if (isExternalToolMode == false) {
-					Log.info("co2:" + value);
+					Log.info("CO²:" + value);
 				} else {
-					System.out.println("co2:" + value);
+					System.out.println("CO²:" + value);
 				}
 
 				Thread.sleep(10000);

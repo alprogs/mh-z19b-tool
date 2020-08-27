@@ -1,7 +1,11 @@
 package mhz19b.util;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Log {
 
+	private static SimpleDateFormat time 	= new SimpleDateFormat( "HH:mm:ss" );
 	private static boolean printForceOnly 	= false;
 
 	public static void force(String message) {
@@ -29,7 +33,7 @@ public class Log {
 		className 	= className.substring( className.lastIndexOf(".") +1, className.length());
 
 		StringBuilder sb = new StringBuilder();
-		sb.append( String.format("[%-15s][%-15s][%-3s] ", className, ste.getMethodName(), ste.getLineNumber()) );
+		sb.append( String.format("[%-8s][%-15s][%-20s][%-3s] ", time.format(new Date()), className, ste.getMethodName(), ste.getLineNumber()) );
 		sb.append(message);
 
 		System.out.println( sb.toString() );

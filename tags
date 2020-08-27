@@ -145,7 +145,7 @@ initControls	build/reports/tests/test/js/report.js	/^    function initControls()
 initTabs	build/reports/tests/test/js/report.js	/^    function initTabs() {$/;"	f
 isExternalToolMode	src/main/java/mhz19b/App.java	/^	private boolean isExternalToolMode = false;$/;"	f	class:App	file:
 isOpened	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public boolean isOpened() {$/;"	m	class:MHZ19BDriver
-isTraceEnabled	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private static final boolean isTraceEnabled 	= false;$/;"	f	class:MHZ19BDriver	file:
+isTraceEnabled	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private static final boolean isTraceEnabled 	= true;$/;"	f	class:MHZ19BDriver	file:
 label.hidden	build/reports/tests/test/css/base-style.css	/^label.hidden {$/;"	c
 logPrefix	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private final String logPrefix;$/;"	f	class:MHZ19BDriver	file:
 main	src/main/java/mhz19b/App.java	/^    public static void main(String[] args) {$/;"	m	class:App
@@ -169,6 +169,7 @@ read	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private byte[] read(int si
 removeClass	build/reports/tests/test/js/report.js	/^    function removeClass(element, classValue) {$/;"	f
 save	build/scripts/mh-z19b-tool	/^save () {$/;"	f
 save	gradlew	/^save () {$/;"	f
+sdf	src/main/java/mhz19b/util/Log.java	/^	private static SimpleDateFormat sdf 	= new SimpleDateFormat( "HH:mm:ss" );$/;"	f	class:Log	file:
 select	build/reports/tests/test/js/report.js	/^    function select(i) {$/;"	c
 serialPort	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private final SerialPort serialPort;$/;"	f	class:MHZ19BDriver	file:
 setAutoCalibration	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public void setAutoCalibration(boolean set) throws IOException {$/;"	m	class:MHZ19BDriver
@@ -177,7 +178,7 @@ setCalibrateZeroPoint	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public vo
 setDetectionRange	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private void setDetectionRange(int range) throws IOException {$/;"	m	class:MHZ19BDriver	file:
 setDetectionRange2000	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public void setDetectionRange2000() throws IOException {$/;"	m	class:MHZ19BDriver
 setDetectionRange5000	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	public void setDetectionRange5000() throws IOException {$/;"	m	class:MHZ19BDriver
-setPrintForceOnly	src/main/java/mhz19b/util/Log.java	/^	private static void setPrintForceOnly(boolean value) {$/;"	m	class:Log	file:
+setPrintForceOnly	src/main/java/mhz19b/util/Log.java	/^	public static void setPrintForceOnly(boolean value) {$/;"	m	class:Log
 setTimeout	src/main/java/mhz19b/driver/MHZ19BDriver.java	/^	private void setTimeout(int timeout) {$/;"	m	class:MHZ19BDriver	file:
 span.code	build/reports/tests/test/css/base-style.css	/^span.code {$/;"	c
 span.code pre	build/reports/tests/test/css/base-style.css	/^span.code pre {$/;"	s

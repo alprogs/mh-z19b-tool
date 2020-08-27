@@ -42,7 +42,7 @@ public class MHZ19BDriver implements AutoCloseable {
 
 	private static final ConcurrentHashMap<String, MHZ19BDriver> map 	= new ConcurrentHashMap<String, MHZ19BDriver>();
 
-	private static final boolean isTraceEnabled 	= false;
+	private static final boolean isTraceEnabled 	= true;
 
 	synchronized public static MHZ19BDriver getInstance(String portName) {
 		return getInstance(portName, DEFAULT_TIMEOUT);
